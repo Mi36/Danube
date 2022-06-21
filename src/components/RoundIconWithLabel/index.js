@@ -1,16 +1,16 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import Colors from '../../styles/colors';
-import PropTypes from 'prop-types';
-import DanubeText from '../DanubeText';
-const myIcon = <Icon name="rocket" size={30} color="#900" />;
+import DanubeText, {TextVariants} from '../DanubeText';
 
 const RoundIconWithLabel = ({icon, label}) => {
   return (
     <View style={styles.container}>
-      <View style={styles.main}>{myIcon}</View>
-      <DanubeText>{label}</DanubeText>
+      <View style={styles.main}>{icon}</View>
+      <DanubeText variant={TextVariants.XS} center>
+        {label}
+      </DanubeText>
     </View>
   );
 };
@@ -19,9 +19,11 @@ export default RoundIconWithLabel;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'green',
     width: 70,
     alignItems: 'center',
+    paddingTop: 15,
+    paddingBottom: 12,
+    marginHorizontal: 15,
   },
   main: {
     height: 60,
@@ -36,8 +38,10 @@ const styles = StyleSheet.create({
 
 RoundIconWithLabel.propTypes = {
   label: PropTypes.string,
+  icon: PropTypes.element,
 };
 
 RoundIconWithLabel.defaultProps = {
   label: 'label',
+  icon: null,
 };
