@@ -43,6 +43,7 @@ const LoginScreen = ({navigation}) => {
             <RoundIconWithLabel
               label={item.label}
               icon={signInIcon}
+              key={item.id}
               dot={item.dot}
               onPress={() => navigation.navigate('MY_ACCOUNT')}
             />
