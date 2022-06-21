@@ -41,8 +41,8 @@ export default TopHeader;
 const styles = StyleSheet.create({
   main: {
     minHeight: 50,
-    borderBottomColor: colors.grey_lighter,
-    borderBottomWidth: 0.5,
+    borderBottomColor: colors.grey_2,
+    borderBottomWidth: 0.3,
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 15,

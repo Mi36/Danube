@@ -21,7 +21,11 @@ export const flagIcon = (
 export const languageIcon = <Icon name="language" size={30} />;
 
 export const trackIcon = (
-  <MaterialCommunityIcons name="truck-check-outline" size={30} />
+  <MaterialCommunityIcons
+    name="truck-check-outline"
+    size={30}
+    color={colors.icon_color}
+  />
 );
 
 export const cartIcon = (
@@ -29,20 +33,24 @@ export const cartIcon = (
 );
 
 export const earthIcon = (
-  <AntDesign name="earth" size={30} color={colors.black} />
+  <AntDesign name="earth" size={25} color={colors.icon_color} />
 );
 
 export const phoneIcon = (
-  <Feather name="phone" size={30} color={colors.black} />
+  <Feather name="phone" size={25} color={colors.icon_color} />
 );
 
 export const arrowIcon = (
-  <MaterialIcons name="keyboard-arrow-right" size={30} color={colors.black} />
+  <MaterialIcons name="keyboard-arrow-right" size={25} color={colors.grey_2} />
 );
 
-export const userIcon = <EvilIcons name="user" size={30} />;
+export const userIcon = (
+  <EvilIcons name="user" size={35} color={colors.icon_color} />
+);
 
-export const heartIcon = <AntDesign name="hearto" size={30} />;
+export const heartIcon = (
+  <AntDesign name="hearto" size={25} color={colors.icon_color} />
+);
 
 export const actionData = [
   {
@@ -51,7 +59,7 @@ export const actionData = [
     icon: (
       <MaterialCommunityIcons
         name="clipboard-list-outline"
-        size={30}
+        size={25}
         color={colors.white}
       />
     ),
@@ -59,16 +67,16 @@ export const actionData = [
   {
     id: '2',
     label: 'Return',
-    icon: <AntDesign name="CodeSandbox" size={30} color={colors.white} />,
+    icon: <AntDesign name="CodeSandbox" size={25} color={colors.white} />,
   },
   {
     id: '3',
     label: 'Wallet',
-    icon: <Ionicons name="ios-wallet-outline" size={30} color={colors.white} />,
+    icon: <Ionicons name="ios-wallet-outline" size={25} color={colors.white} />,
   },
   {
     id: '4',
     label: 'Subscribe Newsletter',
-    icon: <Entypo name="bell" size={30} color={colors.white} />,
+    icon: <Entypo name="bell" size={25} color={colors.white} />,
   },
 ];

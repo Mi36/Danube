@@ -4,17 +4,19 @@ import React from 'react';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import LoginScreen from '../screens/LoginScreen';
-import HomeScreen from '../screens/HomeScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import EntryScreen from '../screens/EntryScreen';
 import WebScreen from '../screens/WebScreen';
+import colors from '../styles/colors';
+import MyAccountScreen from '../screens/MyAccountScreen';
 
 const Tab = createBottomTabNavigator();
 const RouterStack = createNativeStackNavigator();
 
 export const InnerStack = () => {
   return (
-    <Tab.Navigator screenOptions={{headerShown: false}}>
+    <Tab.Navigator
+      screenOptions={{headerShown: false, tabBarActiveTintColor: colors.red}}>
       <Tab.Screen
         name="LOGIN"
         component={LoginScreen}
@@ -26,10 +28,10 @@ export const InnerStack = () => {
         }}
       />
       <Tab.Screen
-        name="HOME"
-        component={HomeScreen}
+        name="MY_ACCOUNT"
+        component={MyAccountScreen}
         options={{
-          tabBarLabel: 'MyAccount',
+          tabBarLabel: 'My Account',
           tabBarIcon: ({color, size}) => (
             <EvilIcons name="user" color={color} size={size} />
           ),

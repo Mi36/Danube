@@ -8,7 +8,7 @@ import RoundIconWithLabel from '../../components/RoundIconWithLabel';
 import SubCard from '../../components/SubCard';
 import TopHeader from '../../components/TopHeader';
 import colors from '../../styles/colors';
-import styles from '../../styles/homeScreen';
+import styles from '../../styles/myAccountScreen';
 import {
   actionData,
   arrowIcon,
@@ -26,7 +26,7 @@ const headsetIcon = (
   <MaterialIcons name="headset-mic" size={20} color={colors.black} />
 );
 
-const HomeScreen = ({navigation}) => {
+const MyAccountScreen = ({navigation}) => {
   const onNavigate = () => navigation.navigate('WEB');
 
   return (
@@ -107,4 +107,4 @@ const HomeScreen = ({navigation}) => {
   );
 };
 
-export default HomeScreen;
+export default MyAccountScreen;

@@ -3,6 +3,7 @@ import colors from './colors';
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#FFFFFF',
+    flex: 1,
   },
   header: {
     backgroundColor: colors.grey,

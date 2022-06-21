@@ -9,5 +9,9 @@ const styles = StyleSheet.create({
     width: 35,
     height: 20,
   },
+  container: {
+    backgroundColor: '#FFFFFF',
+    flex: 1,
+  },
 });
 export default styles;

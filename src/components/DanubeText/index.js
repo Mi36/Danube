@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   xsmall: {
-    fontSize: 15,
+    fontSize: 13.5,
   },
   bold: {
     fontWeight: 'bold',

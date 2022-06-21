@@ -7,7 +7,7 @@ import DanubeText, {TextVariants} from '../DanubeText';
 const HeaderCard = ({label}) => {
   return (
     <View style={styles.main}>
-      <DanubeText variant={TextVariants.S} color={colors.grey_2}>
+      <DanubeText variant={TextVariants.S} color={colors.text_grey}>
         {label}
       </DanubeText>
     </View>

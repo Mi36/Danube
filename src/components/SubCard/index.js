@@ -1,7 +1,8 @@
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import PropTypes from 'prop-types';
-import DanubeText from '../DanubeText';
+import DanubeText, {TextVariants} from '../DanubeText';
+import colors from '../../styles/colors';
 
 const SubCard = ({
   flagIcon,
@@ -18,11 +19,18 @@ const SubCard = ({
       onPress={onPress}>
       <View style={styles.left}>
         {leftIcon}
-        <DanubeText style={styles.leftText}>{leftLabel}</DanubeText>
+        <DanubeText
+          style={styles.leftText}
+          color={colors.grey_2}
+          variant={TextVariants.XS}>
+          {leftLabel}
+        </DanubeText>
       </View>
       <View style={styles.right}>
         {rightIcon}
-        <DanubeText style={styles.rightText}>{rightLabel}</DanubeText>
+        <DanubeText style={styles.rightText} color={colors.grey_2}>
+          {rightLabel}
+        </DanubeText>
         {flagIcon ? flagIcon : null}
       </View>
     </TouchableOpacity>
@@ -34,14 +42,13 @@ export default SubCard;
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: 'yellow',
     minHeight: 25,
     paddingHorizontal: 15,
     paddingVertical: 25,
-    borderWidth: 1,
+    borderBottomWidth: 0.2,
+    borderBottomColor: colors.grey_2,
   },
   left: {
-    backgroundColor: 'red',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',

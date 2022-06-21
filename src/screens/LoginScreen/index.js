@@ -18,17 +18,35 @@ import {
 } from '../../utils/common';
 
 const signInIcon = <Icon name="user" size={30} color={colors.white} />;
-const signUpIcon = <Icon name="user-plus" size={30} color={colors.white} />;
+
+const authData = [
+  {
+    id: '1',
+    label: 'Sign In',
+    dot: false,
+  },
+  {
+    id: '2',
+    label: 'Sign Up',
+    dot: true,
+  },
+];
 
 const LoginScreen = ({navigation}) => {
   const onNavigate = () => navigation.navigate('WEB');
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <ScrollView>
         <TopHeader onBackPress={() => navigation.goBack()} />
         <View style={styles.roundIconContainer}>
-          <RoundIconWithLabel label="Sign In" icon={signInIcon} />
-          <RoundIconWithLabel label="Sign Up" icon={signUpIcon} />
+          {authData.map(item => (
+            <RoundIconWithLabel
+              label={item.label}
+              icon={signInIcon}
+              dot={item.dot}
+              onPress={() => navigation.navigate('MY_ACCOUNT')}
+            />
+          ))}
         </View>
         <HeaderCard label="SETTINGS" />
         <SubCard

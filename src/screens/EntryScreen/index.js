@@ -1,5 +1,7 @@
 import React from 'react';
-import {SafeAreaView, Text, TouchableOpacity} from 'react-native';
+import {SafeAreaView, TouchableOpacity} from 'react-native';
+import DanubeText from '../../components/DanubeText';
+import colors from '../../styles/colors';
 import styles from '../../styles/entryScreen';
 
 const EntryScreen = ({navigation}) => {
@@ -8,7 +10,9 @@ const EntryScreen = ({navigation}) => {
       <TouchableOpacity
         onPress={() => navigation.navigate('INNER')}
         style={styles.button}>
-        <Text>PRESS HERE</Text>
+        <DanubeText bold color={colors.white}>
+          Press Here To Continue
+        </DanubeText>
       </TouchableOpacity>
     </SafeAreaView>
   );

@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
+import colors from '../../styles/colors';
 import DanubeText, {TextVariants} from '../DanubeText';
 
 const HeaderIconWithLabel = ({icon, label}) => {
   return (
     <View style={styles.main}>
       {icon}
-      <DanubeText variant={TextVariants.XS}>{label}</DanubeText>
+      <DanubeText variant={TextVariants.XS} color={colors.icon_color}>
+        {label}
+      </DanubeText>
     </View>
   );
 };
